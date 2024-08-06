@@ -10,7 +10,7 @@ INSERT INTO Usuario
 ('Ana'                  ,'Garcia'                              ,'1750111215' );
 
 INSERT INTO AdminCredencial
-(idUsuario             ,Usuario                            ,Contrasenia)VALUES
+(idUsuario             ,Usuario                            ,Contrasena)VALUES
 (1                      ,'MartinDavalos'                     ,'Amodellaves' ),
 (2                      ,'JuanPerez'                          ,'Juan2344' ),
 (3                      ,'MariaRodriguez'                     ,'3872Ana' ),
@@ -22,7 +22,7 @@ INSERT INTO Producto
 ('Producto 2',                 29.99,                'Descripción del producto 1', '9876543210',              5),
 ('Producto 3',                 39.99,                'Descripción del producto 1',  '1111111111',              15);
 
-INSERT INTO RegistroEscaneo
+INSERT INTO RegistroProducto
 ( idProducto     )Values
 (1)
 ,(2)

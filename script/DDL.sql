@@ -4,7 +4,7 @@
 DROP TABLE IF EXISTS AdminCredencial;
 DROP TABLE IF EXISTS Usuario;
 DROP TABLE IF EXISTS Producto;
-DROP TABLE IF EXISTS RegistroEscaneo;
+DROP TABLE IF EXISTS RegistroProducto;
 CREATE TABLE Usuario (
     idUsuario           INTEGER PRIMARY KEY AUTOINCREMENT,
     Nombre              VARCHAR(50) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE AdminCredencial (
         idAdminCredencial        INTEGER PRIMARY KEY AUTOINCREMENT,
         idUsuario                INTEGER NOT NULL,
         Usuario                  VARCHAR (50) NOT NULL UNIQUE,
-        Contrasenia              VARCHAR (50) NOT NULL ,
+        Contrasena              VARCHAR (50) NOT NULL ,
         FechaCreacion            DATETIME DEFAULT (datetime('now', 'localtime')),
         FechaModifica            DATETIME DEFAULT (datetime('now', 'localtime')),
         CONSTRAINT               fk_Usuario FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)                
@@ -35,8 +35,8 @@ CREATE TABLE Producto (
     FechaModifica          DATETIME DEFAULT (datetime('now', 'localtime'))
 );
 
-CREATE TABLE RegistroEscaneo (
-    idRegistroEscaneo           INTEGER PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE RegistroProducto (
+    idRegistroProducto           INTEGER PRIMARY KEY AUTOINCREMENT,
     idProducto                  INTEGER NOT NULL REFERENCES Producto (idProducto),
     FechaCreacion               DATETIME DEFAULT (datetime('now','localtime'))
 );
