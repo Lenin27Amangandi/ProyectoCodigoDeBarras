@@ -18,7 +18,7 @@ public abstract class SplashScreenForm {
 
     public static void show() {
         System.out.println(Style.URL_SPLASH);
-        iconSplash = new ImageIcon("src/UserInterface/Resources/Img/Splash.png");
+        iconSplash = new ImageIcon("src/UserInterface/Resources/Img/EA.png");
         labelSplash = new JLabel(iconSplash);
         splashLoading = new JProgressBar(0, 100);
 
